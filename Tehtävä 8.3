@@ -1,0 +1,43 @@
+using System;
+
+namespace Tehtävä_8._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           
+
+            Console.WriteLine("Tehtävä 8.3");
+            Console.WriteLine();
+            Console.WriteLine("-----------------");
+            Console.WriteLine();
+            Console.Write("Kuinka monta tuotetta lisätään? ");
+            int luku = int.Parse(Console.ReadLine());
+            double[] hinta = new double[luku];
+            int[] maara = new int[luku];
+            int T;
+            string[] nimet = new string[luku];
+
+            for (int i = 0; i <  luku; i++)
+            {
+                T = i + 1;
+                Console.Write("Anna " + T + ". tuotteen nimi ? ");
+                nimet[i] = Console.ReadLine();
+                Console.Write("Anna " + T + ". tuotteen hinta ? ");               
+                hinta[i] = double.Parse(Console.ReadLine());
+                Console.Write("Anna " + T + ". tuotteen lukumäärä ? ");
+                maara[i]=
+            }
+            
+
+           
+            
+
+
+            
+
+            
+        }
+    }
+}
