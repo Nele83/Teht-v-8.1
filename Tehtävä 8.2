@@ -1,0 +1,28 @@
+using System;
+
+namespace Tehtävä_8._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // € merkin tulostuksen mahdollistaminen
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            //Tämä ominaisuus palauttaa UTF8Encoding-objektin, joka koodaa Unicode-merkit
+            Console.WriteLine("Tehtävä 8.2");
+            Console.WriteLine();
+            Console.WriteLine("-------------");
+            Console.WriteLine();
+            //Nimetty tuotteet
+            string[] nimet = { "Vasara", "Saha", "Kirves" };           
+            //Tuotteiden hinnat
+            int[] raha = {5, 10, 15};
+            //3= Nimev voisi olla mielummin Lenght nimet.lenght.
+            for (int i = 0; i < 3; i++)
+            {// Tällä +" "+ tulee vasara ja 5€:n väliin väli.
+                Console.WriteLine(nimet [i] +" "+  raha [i] + "€");
+            }
+        }
+
+    }
+}
