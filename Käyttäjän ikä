@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Käyttäjän_iän
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Esitellään muuttujat 
+            int luku;
+            string sukupuoli;
+            Console.Write("Minkä ikäinen olet? ");
+            luku = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Olet nainen vai mies (N/M/ ? ");
+            sukupuoli = Console.ReadLine();
+            Console.WriteLine();
+            //Määritellään sukupuoli ja kirjain onko iso vai pieni.
+            if (sukupuoli == "M" || sukupuoli == "m")
+            {
+             if (luku < 14) //Jos on alle 14v
+             { Console.WriteLine("Mitäs poitsu?"); } //Silloin kommentti
+
+             else if (luku >= 14 && luku <=25) //Jos on 14-25v             
+             {Console.WriteLine("Mitäs nuori mies?"); } //Silloin kommentti
+             
+             else if (luku >25 && luku <=56)                 
+             {Console.WriteLine("Olet mies parhaassa iässä!"); }
+             
+             else //Kun onkin enemmän kun 56v
+             { Console.WriteLine("Mitäs vanha ukko?"); }  //Silloin kommentti           
+            }
+            if (sukupuoli == "N" || sukupuoli == "n")
+            {
+                if (luku < 14)
+                {
+                    Console.WriteLine("Mitäs tyttö?");
+                }
+                else if (luku >= 14 && luku <= 25)
+                {
+                    Console.WriteLine("Mitäs nuori nainen?");
+                }
+                else if (luku > 25 && luku <= 56)
+                {
+                    Console.WriteLine("Olet nainen parhaassa iässä!");
+                }
+                else
+                {
+                    Console.WriteLine("Mitäs vanha akka?");
+                }
+
+            }
+        }
+    }
+}
