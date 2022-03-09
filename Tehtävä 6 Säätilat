@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tehtävä_6_Saatilat
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Esitellään muuttujat           
+            string paistaa, sataa, lampo;
+            //Kysymys
+            Console.Write("Paistaako aurinko (K/E)? "); 
+            paistaa = Console.ReadLine();//Vastaus
+            Console.Write("Sataako vettä (K/E)?     ");
+            sataa = Console.ReadLine();
+            Console.Write("Onko lämpötila >0 (K/E)? ");
+            lampo = Console.ReadLine();
+            Console.WriteLine();
+
+            //Kirjaimet pysyy isona vaikka käyttäjä vastaakin pienellä.
+            //Jari auttoi
+            paistaa = paistaa.ToUpper();
+            sataa = sataa.ToUpper();
+            lampo = lampo.ToUpper();
+            //Jossittelu
+            if (paistaa == "K" && sataa == "K" && lampo == "K")
+            {
+                Console.WriteLine("Aurinko paistaa ja vettä sataa, taitaa tulla kesä ");
+            }
+            else if (paistaa == "E" && sataa == "K" && lampo == "K")
+            {
+                Console.WriteLine("Syksy saapui tuuli vei lehdet mennessään");
+            }
+
+            else if (paistaa == "E" && sataa == "E" && lampo == "K")
+            {
+                Console.WriteLine("Jo joutui armas aika ja suvi suloinen");
+            }
+
+            else if (paistaa == "K" && sataa == "E" && lampo == "E")
+            {
+                Console.WriteLine(" Keväinen talvi kesän tuo ");
+            }
+
+            else
+            {                         
+                Console.WriteLine("Ompa erikoinen sää!");
+            }
+
+        }
+
+    }
+}
