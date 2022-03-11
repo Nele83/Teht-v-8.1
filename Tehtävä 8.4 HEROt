@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tehtävä_8._4_HEROt
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, j;
+            
+            Console.WriteLine("Tehtävä 8.4 ");
+            Console.WriteLine("------------------");
+            Console.WriteLine();
+            Console.WriteLine("HEROt ovat seuraavat:");
+           
+          string[,] nimet = new string[4, 5]; //teen taulukon jossa on 5 saraketta ja 4 riviä, 
+                                             //mut toi 1 alkaa 0:sta eli HEROt jää
+
+            nimet[0, 0] = "HERO"; // Ensimmäisellä rivillä 4 saraketta: (HERO on piilossa) Ana, Bastion, Brigette, D.Va (Mech)
+            nimet[0, 1] = "Ana"; // on 1:n
+            nimet[0, 2] = "Bastion"; // on 2:n
+            nimet[0, 3] = "Brigette"; // on 3:n
+            nimet[0, 4] = "D.Va (Mech)"; // 4:n
+
+            for (i = 1; i < 5; i++) //eli o:lla olisi 1:si ja pyörisi viisi kertaa tai jotain
+            {
+                Console.WriteLine("(" + i + ")" + " " + nimet[0, i]);
+            }    // Näkyville tulisi (1) + Ana, ja toiselle riville (2) Bastion jne
+            Console.WriteLine(); //Tyhjä rivi
+            Console.Write("Valitse minkä HEROn tiedot haluat nähdä? ");
+            //Käyttäjältä kysytään
+            int valinta = (int.Parse(Console.ReadLine()));
+            //Käyttäjä vastaa valintansa
+            Console.WriteLine();//Tyhjä rivi
+
+            string[,] nim = new string[4,5];//Uuden taulukon syöttä tai siis sama taulukko :D vaan toinen rivi
+            //eli mitkä tulee sitten näkyviin mitä käyttäjä valitsee
+            nim[1, 0] = "ROLE"; //Toinen rivi taulukossa (ROLE jää näkymättömäksi) ja alkaa ne 4:ä saraketta Suppoet, Defence, Support, Tank
+            nim[1, 1] = "Support"; //ensimmäinen sarake
+            nim[1, 2] = "Defence"; // toinen sarake
+            nim[1, 3] = "Support"; // kolmas sarake
+            nim[1, 4] = "Tank";    // neljäs sarake
+
+            nim[2, 0] = "HEALTH"; //Eli kolmas rivi ja rivillä neljä saraketta: 200, 200, 200, 400
+            nim [2, 1] = "200";
+            nim[2, 2] = "200";
+            nim[2, 3] = "200";
+            nim[2, 4] = "400";
+
+            nim[3, 0] = "ARMOR"; // Viimeinen rivi ja edelleen neljä saraketta: 0, 100, 50, 200
+            nim[3, 1] = "0";
+            nim[3, 2] = "100";
+            nim[3, 3] = "50";
+            nim[3, 4] = "200";
+
+            for (j = 0; j < 1; j++) //Mitä tulostaa niin sanotusti toisen taulukon, yhdelle riville ja pelkästään 
+                                    //sen mitä käyttäjä valitsi eli vaikka 2:n niin näkyviin tulee --> Bastion Defence 200 100
+                                    //en osaa paremmin selittää, viellä :D
+            {
+                Console.WriteLine(nimet[0, valinta] +" "+ nim[1,valinta] +" "+ nim[2, valinta]+" "+ nim[3, valinta]); 
+                //Mitä tulostetaan käyttäjälle, käyttäjä valitsee niin sanotusti ensimmäisestä taulukosta jonkun vaikka (2) Bastionin painaa eli nimet+käyttäjän
+                //valinta + mitä tulostetaan toisesta taulukosta näkyviin siksi pitääkin kaikki rivit lisätä +:lla mutta näkyviin tulee käyttäjän
+                //valinnan mukaan eli 2:n voimat.
+            }
+        }
+    }
+}   
+
+
+    
+
